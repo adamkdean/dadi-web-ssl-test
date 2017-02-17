@@ -3,6 +3,13 @@
 <h1>DADI Web SSL Test</h1>
 <p>The following table shows request headers.</p>
 
+<p>
+  <strong>Protocol:</strong> {request.protocol}<br>
+  <strong>Secure:</strong> {request.secure}<br>
+  <strong>IP:</strong> {request.ip}<br>
+  <strong>IPs:</strong> {request.ips}
+</p>
+
 <table>
   <thead>
     <tr>
@@ -11,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-    {@iterate obj=headers}
+    {@iterate obj=request.headers}
     <tr>
       <td>{key}</td>
       <td>{value}</td>
