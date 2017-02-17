@@ -2,3 +2,6 @@ body {
   background: #eee;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+table { font-family: monospace; }
+table thead tr th { text-align: left; }

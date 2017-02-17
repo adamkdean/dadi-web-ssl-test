@@ -8,7 +8,8 @@
     "start": "NODE_ENV=development node main.js"
   },
   "dependencies": {
-    "@dadi/web": ">=1.8.0 <1.9.0"
+    "@dadi/web": ">=1.8.0 <1.9.0",
+    "lodash": "^4.17.4"
   },
   "engines": {
     "node": ">=4.6.0",
