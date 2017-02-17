@@ -1,0 +1,6 @@
+{>"partials/header"/}
+
+<h1>DADI Web SSL Test</h1>
+<p>Hello. This works.</p>
+
+{>"partials/footer"/}
