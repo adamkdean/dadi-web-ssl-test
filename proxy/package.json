@@ -1,0 +1,17 @@
+{
+  "name": "proxy",
+  "version": "0.0.1",
+  "author": "Adam K Dean <akd@dadi.co>",
+  "description": "DADI Web test proxy",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_ENV=development node main.js"
+  },
+  "dependencies": {
+    "http-proxy": "^1.16.2"
+  },
+  "engines": {
+    "node": ">=4.6.0",
+    "npm": ">3.0.0"
+  }
+}
