@@ -12,10 +12,14 @@
   "paths": {
     "events": "workspace/events",
     "helpers": "workspace/helpers",
+    "middleware": "workspace/middleware",
     "pages": "workspace/pages",
     "partials": "workspace/partials",
     "public": "workspace/public"
   },
   "cluster": false,
-  "debug": false
+  "debug": false,
+  "security": {
+    "trustProxy": true
+  }
 }
