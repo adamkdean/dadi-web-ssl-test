@@ -3,4 +3,6 @@
 <h1>DADI Web SSL Test</h1>
 <p>Hello. This works.</p>
 
+<pre>{@contextDump/}</pre>
+
 {>"partials/footer"/}

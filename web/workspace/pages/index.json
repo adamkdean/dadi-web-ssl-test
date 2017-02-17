@@ -3,7 +3,9 @@
     "name": "Index",
     "language": "en"
   },
-  "datasources": [],
+  "events": [
+    "headers"
+  ],
   "route": [
     {
       "path": "/"
