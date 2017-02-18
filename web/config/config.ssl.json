@@ -4,7 +4,10 @@
   },
   "server": {
     "host": "127.0.0.1",
-    "port": 5080
+    "port": 5443,
+    "protocol": "https",
+    "sslPrivateKeyPath": "../ssl/key.pem",
+    "sslCertificatePath": "../ssl/cert.pem"
   },
   "api": {
     "enabled": false
@@ -21,6 +24,6 @@
   "debug": false,
   "security": {
     "transportSecurity": true,
-    "trustProxy": true
+    "trustProxy": false
   }
 }
