@@ -1,25 +1,28 @@
 'use strict'
 
+const USE_SSL = true
+
 const fs = require('fs')
 const httpProxy = require('http-proxy')
 
 function TestProxy() {
-  this.createServer({
+  const options = {
+    xfwd: true,
     target: {
       host: 'localhost',
       port: 5080
-    },
-    ssl: {
-      cert: fs.readFileSync('ssl/cert.pem', 'utf8'),
-      key: fs.readFileSync('ssl/key.pem', 'utf8')
-    },
-    xfwd: true
-  }).listen(5443)
-}
+    }
+  }
+  if (USE_SSL) {
+    options.ssl = {
+      cert: fs.readFileSync('../ssl/cert.pem', 'utf8'),
+      key: fs.readFileSync('../ssl/key.pem', 'utf8')
+    }
+  }
 
-TestProxy.prototype.createServer = (options) => {
-  this._instance = httpProxy.createProxyServer(options)
-  return this._instance
+  httpProxy
+    .createProxyServer(options)
+    .listen(USE_SSL ? 5443 : 5081)
 }
 
 module.exports = exports = new TestProxy()
